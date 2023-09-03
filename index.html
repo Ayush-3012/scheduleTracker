@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onbo Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="container-fluid">
+    <header class="d-flex justify-content-between">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="weeks"></ul>
+          </div>
+        </div>
+      </nav>
+      <div class="addWeek" id="addWeek">
+        <button class="nav-link addWeekBtn" id="addWeekBtn">
+          <i class="fa-solid fa-calendar-week"></i> Add a new week
+        </button>
+        <div class="card" id="card">
+          <div class="card-body">
+            <div class="cardHead d-flex justify-content-between px-2">
+              <h5 class="card-title">Add New Week</h5>
+              <h5><i class="fa-solid fa-calendar-week"></i></h5>
+            </div>
+            <hr />
+            <form id="formSubmit">
+              <div class="cardBody d-flex justify-content-around">
+                <div class="order">
+                  <div class="dropdown">
+                    <select
+                      class="dropdown-toggle menu1"
+                      aria-expanded="false"
+                      id="dropdown1Item"
+                    ></select>
+                  </div>
+                </div>
+                <div class="week">
+                  <div class="dropdown">
+                    <select
+                      class="dropdown-toggle menu2"
+                      aria-expanded="false"
+                      id="dropdown2Item"
+                    ></select>
+                  </div>
+                </div>
+              </div>
+              <div class="toAdd">
+                <p>
+                  New week will be added
+                  <span id="when" style="opacity: 0.5">"order"</span>
+                  <span id="which" style="opacity: 0.5">"week"</span>
+                </p>
+                <input
+                  type="text"
+                  placeholder="Enter your work here"
+                  class="inputText"
+                  required
+                />
+                <div class="btns d-flex justify-content-around">
+                  <button type="submit" class="btn btn-primary" id="createWeek">
+                    Create
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mainBody">
+      <div class="leftDiv" id="leftDiv">
+        <h3 class="weekTitle">
+          Click on the week above to check the schedule of that week.
+        </h3>
+      </div>
+      <div class="rightDiv" id="rightDiv">
+        <p class="weekContent" id="weekContent">
+          Here comes the schedule of the following week.
+        </p>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
